@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.求任意两个数的最大值，并返回
+    function getMax(x = 0, y = 0) {
+      // return x > y ? x : y
+      if (x > y) {
+        return x
+      }
+
+      // return结束函数，所以只能有一个return被执行到
+      return y
+    }
+    // 求任意数组中的最大值和最小值并返回这个最大值和最小值
+    function arrMaxAndMix(arr = []) {
+      let max = arr[0]
+      let mix = arr[0]
+      // 最大值  
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+          max = arr[i]
+        }
+      }
+      //  最小值
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < mix) {
+          mix = arr[i]
+        }
+      }
+      //  return只能return一个值，数组可以装多个数据
+      return [max, mix]
+    }
+
+
+    let numMax = getMax(1, 2)
+    let maxAndMix = arrMaxAndMix([2, 4, 5, 4444, 555, 432])
+    console.log(`两个数字中的最大值为${numMax}`)
+    console.log(`数组中的最大值为${maxAndMix[0]}`)
+    console.log(`数组中的最小值为${maxAndMix[1]}`)
+
+  </script>
+</body>
+
+</html>
