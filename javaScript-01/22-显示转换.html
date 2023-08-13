@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   let str = '123'
+   console.log(str);
+   console.log(Number(str)) // NAN
+  //  转换完成之后类型是数字类型,未转换前是字符串类型
+  let num = Number(prompt('输入年薪:'))
+  console.log(num)
+  // 另一种转换成数字类型的方法
+  let num1 = +Number(prompt('输入年薪:'))
+  console.log(num1)
+  // 只要整数
+  console.log(parseInt('12px')); // 12
+  console.log(parseInt('12.35px')); // 12
+  console.log(parseInt('ABC12.35px')); // NAN
+  
+// --------------------------------
+  console.log(parseFloat('12px'));  //12
+  console.log(parseFloat('12.3px')); //12.3
+  console.log(parseFloat('12.35px')); //12.35
+  console.log(parseFloat('abc12.35px')); //NAN
+
+  </script>
+</body>
+</html>

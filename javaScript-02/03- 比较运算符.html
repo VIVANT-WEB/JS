@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 隐式转换,比较运算符也有转换,按道理数字类型才能比较，把'3'转换成3
+    console.log(3 == '3'); //true
+    // 以后用 ===，==很多情况容易判断错
+    console.log('2' === 2); //false
+    // 特殊的
+    console.log(NaN === NaN) //false,NaN不等于任何人，包括他自己
+    // != 不全等，还是判断值和数据类型
+    console.log(2 !== 2);
+   console.log(' -----------------------------------');
+    // 字母的ASCII码值比较,注意引号之间 不能加空格,字符串的话。
+    console.log('a' > 'b'); //false
+   console.log(' -----------------------------------');
+
+   </script>
+</body>
+</html>

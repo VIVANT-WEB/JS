@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // 页面中打印5个星星
+  for(let i = 1; i<= 5; i++){
+    document.write('*')
+  }
+  document.write('<br>')
+//  1-100偶数和
+let num = 0
+for(let i =1; i <= 100; i++){
+  if(i % 2 === 0){
+    num += i
+  }
+
+}
+document.write(`1-100的和为${num}`)
+// 4.打印数组
+let arr = ['刘德华','啊啊啊','你好','另一方']
+//必须从0开始,数组索引号是从0开始的
+for(let i = 0; i < arr.length;i++){
+  document.write(arr[i])
+}
+ </script>
+</body>
+</html>

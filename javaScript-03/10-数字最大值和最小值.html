@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let num = [2, 6, 77, 52, 24554, 7]
+    let max = num[0]
+    for (let i = 1; i < num.length; i++) {
+      if (max < num[i]) {
+        // 如果max 比数组元素里的值小，我们就把这个数组元素赋给max
+        max = num[i]
+      }
+
+    }
+    document.write(max)
+
+  </script>
+</body>
+
+</html>
