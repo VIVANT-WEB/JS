@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let num = 20
+    // 函数的参数看做函数的局部变量
+    function fn(x,y) {
+          // 特殊情况，这种情况num是全局变量
+      num = 10
+      console.log(x);
+    }
+  fn(1,2)
+  console.log(num);//结果是10，如果函数里面的num加let了结果是20
+  </script>
+</body>
+</html>

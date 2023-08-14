@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let num = +prompt('请输入秒数')
+    let time = function (t = 0) {
+      let h = parseInt(t / 60 / 60 % 24)
+      let m = parseInt(t / 60 % 60)
+      let s = parseInt(t % 60)
+      let num = [h, m, s]
+      //  num.push(h)
+      //  num.push(m)
+      //  num.push(s)
+
+      for (let i = 0; i < num.length; i++) {
+        if (num[i] < 10) {
+          num[i] = `0${num[i]}`
+        }
+      }
+      return num
+    }
+    let arr = time(num)
+    document.write(`${num}转换为${arr[0]}小时${arr[1]}分钟${arr[2]}秒`
+    )
+  </script>
+</body>
+
+</html>
