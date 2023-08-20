@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学车在线首页</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 4. box核心内容区域开始 -->
+    <div class="box w">
+        <div class="box-hd">
+            <h3>精品推荐</h3>
+            <a href="#">查看全部</a>
+        </div>
+        <div class="box-bd">
+            <ul class="clearfix">
+                <!-- <li>
+                    <a href="#">
+                        <img src="images/course01.png" alt="">
+                        <h4>
+                            Think PHP 5.0 博客系统实战项目演练
+                        </h4>
+                        <div class="info">
+                            <span>高级</span> • <span>1125</span>人在学习
+                        </div>
+                    </a>
+                </li> -->
+
+                <script>
+                    let data = [
+                        {
+                            src: 'images/course01.png',
+                            title: 'Think PHP 5.0 博客系统实战项目演练',
+                            num: 1125
+                        },
+                        {
+                            src: 'images/course02.png',
+                            title: 'Android 网络动态图片加载实战',
+                            num: 357
+                        },
+                        {
+                            src: 'images/course03.png',
+                            title: 'Angular2大前端商城实战项目演练',
+                            num: 22250
+                        },
+                        {
+                            src: 'images/course04.png',
+                            title: 'AndroidAPP实战项目演练',
+                            num: 389
+                        },
+                        {
+                            src: 'images/course05.png',
+                            title: 'UGUI源码深度分析案例',
+                            num: 124
+                        },
+                        {
+                            src: 'images/course06.png',
+                            title: 'Kami2首页界面切换效果实战演练',
+                            num: 432
+                        },
+                        {
+                            src: 'images/course07.png',
+                            title: 'UNITY 从入门到精通实战案例',
+                            num: 888
+                        },
+                        {
+                            src: 'images/course08.png',
+                            title: "Cocos 深度学习你不会错过的实战",
+                            num: 590
+                        },
+                        {
+                            src: 'images/course04.png',
+                            title: '自动添加的模块',
+                            num: 1000
+                        }
+                    ]
+                    //  数组对象本质数组，用for不用for..in for...in中k是自符串容易出问题
+                    for (let i = 0; i < data.length; i++) {
+                        document.write(`
+                        <li> 
+                            <a href="#">
+                                <!-- 中间有空格,如果title后面得加"",不然内容有空格的话会截止到空格,取的值的引号并不能作为title的格式的引号,取到的引号表明数据是字符串,不能当做title的格式的引号title = "" -->
+                                <!-- 结论不管里面的数据,格式该怎么写怎么写,数据没有空格就可以省略格式上的引号 -->
+                                <!--区别h4是直接丢到盒子里,而title是渲染文字的(鼠标经过才出来)-->
+                              <img src="${data[i].src}" alt="" title="${data[i].title}">
+                              <h4>${data[i].title}
+                             </h4>
+                                <div class = "info">
+                                    <span>高级</span> ·  <span>${data[i].num}</span>人在学习
+                                   
+                            </a>
+                        </li>
+                      `)
+                    }
+                </script>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let obj = {
+      song : function(x, y) {
+          console.log(x + y);
+      }
+    }
+    console.log(obj.song(1,2)); // 没return，返回undefined
+    obj.song(1,2) //结果是3
+  </script>
+</body>
+</html>

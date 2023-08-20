@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function getRandom(N,M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+    let random = getRandom(1,10)
+    let num1 = 0
+    while(true){ 
+      num1 = +prompt('用户输入一个1~10之间的数')
+    if(random > num1){
+      alert('数字猜小了继续猜')
+    }else if(random < num1){
+      alert('数字猜大了继续猜')
+      
+    }else{
+      alert('猜对啦，真厉害')
+      break
+    }
+  } 
+  </script>
+</body>
+</html>

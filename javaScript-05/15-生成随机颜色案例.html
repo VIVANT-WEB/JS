@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+    // 自定义一个随机颜色函数
+    function getRandomColor(flag) {
+      // 如果是true返回 #ffffff
+
+      if (flag === 'true' || flag === '') {
+        // 字符串拼接
+        let str = '#'
+        for (let i = 0; i < 6; i++) {
+          str += arr[getRandom(0, 15)]
+        }
+
+        document.write(str)
+        // 如果是false返回 rgb（255,255,255)
+      } else if (flag === 'false') {
+        document.write(
+          `
+        rgb(${random[0]},${random[1]},${random[2]})
+        `
+        )
+      }
+    }
+
+    let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+    let random = []
+    for (let i = 0; i < 3; i++) {
+      random[i] = getRandom(0, 255)
+    }
+
+
+    let flag = prompt('请输入一个布尔类型的参数')
+    getRandomColor(flag)
+
+  </script>
+</body>
+
+</html>

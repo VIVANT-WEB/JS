@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let arr = ['pink','red']
+    for(let k in arr){
+       console.log(k); //打印的数组的下标，索引号，但是是字符串类型的,字符串类型的索引号操作很容易出问题
+       console.log(arr[k]);
+
+    }
+    let obj = {
+      uname : 'pink老师',
+      age : 18
+    }
+    // 遍历对象
+    for(let key in obj){
+      console.log(key); //属性名 'uname'
+      console.log(obj.key);//相当于obj.'uname'，这样写有bug,用[]就没有bug了，没有这个变量就是undefined
+      console.log(obj['uname']); //中括号的格式 'uname ' === key
+      console.log(obj[key]); // 正确的唯一的一种方法
+    }
+
+  </script>
+</body>
+</html>
