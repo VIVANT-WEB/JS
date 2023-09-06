@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ 
+
+    .box {
+      margin: 100px auto;
+      width: 300px;
+      height: 150px;
+      background-color: pink;
+    }
+
+    .close {
+      float: right;
+      color: red;
+      width: 12px;
+      height: 20px;
+      margin-right: 5px;
+      border-color: red;
+      border-radius: 1px;
+    }
+
+    .hidden {
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <button class="close">x</button>
+  </div>
+  <script>
+    //  1.获取元素
+    const button = document.querySelector('.close')
+    const box = document.querySelector('.box')
+    button.addEventListener('click', function () {
+      // 隐藏是通过display,display属于样式
+      // 大盒子设置display = 'none',里面的小盒子也就没有了
+      box.style.display = 'none'
+  })
+
+  </script>
+</body>
+
+</html>

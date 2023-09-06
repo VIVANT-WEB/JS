@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+
+    }
+
+    .box {
+      width: 1530px;
+      height: 800px;
+      background-image: url(images/desktop_1.jpg);
+
+    }
+
+    li {
+      list-style: none;
+    }
+
+    li {
+      padding-bottom: 40px;
+    }
+
+    span {
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    ul {
+      margin-left: 700px;
+      padding-top: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li>
+        <h4>传智教育年会抽奖</h4>
+      </li>
+      <li><span>一等奖: </span><span id="name"></span></li>
+      <li><span>二等奖: </span><span id="name1"></span></li>
+      <li><span>三等奖: </span><span id="name2"></span></li>
+    </ul>
+  </div>
+  <script>
+    function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+    // 1.声明数组 
+    const arr = ['周杰伦', '刘德华', '周星驰', 'Pink老师', '张学友']
+    const reward = []
+    //  2.获取元素
+    reward.push(document.querySelector('#name'))
+    reward.push(document.querySelector('#name1'))
+    reward.push(document.querySelector('#name2'))
+
+    for (let i = 0; i < reward.length; i++) {
+     
+      let num = getRandom(0, arr.length - 1)
+       // 3.把抽出来的数组元素，给innerHTML
+      reward[i].innerHTML = arr[num]
+      // 4.删除抽出来的数组元素
+      arr.splice(num, 1)
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">123</div>
+  <div class="box2">abc</div>
+  <p id = "nav">导航栏</p>
+  <ul>
+    <li>测试</li>
+    <li>测试</li>
+    <li>测试</li>
+  </ul>
+  <script>
+  // 获取匹配到的第一个元素
+  const box = document.querySelector('div')
+  const box1 = document.querySelector('.box')
+  const box2 = document.querySelector('.box2')
+  const box3 = document.querySelector('#nav')
+  // 获取第一个小li
+  // const box4 = document.querySelector('ul li:first-child') 
+
+  // console.log(box);
+// 获取所有小li
+ const li = document.querySelectorAll('ul li')
+ console.log(li);
+  </script>
+</body>
+</html>  

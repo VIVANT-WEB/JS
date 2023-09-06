@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>1122</button>
+  <script>
+
+    // this指向函数的调用者
+    function fn() {
+      console.log(this)//window
+    }
+    // 普通函数的未缩写调用方式 普通函数里面this指向的是window
+    window.fn()
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', function () {
+   
+      //  下面代码相当于把是函数内的内容给了next的click方法
+      // 用传统的写法帮助理解，next.onclick = function(){},把函数给了click，click()这样就是调用click了。
+    // next.addEventListener('click', function () {})
+    // 	var btn = document.getElementById("btn");
+		// btn.onclick=function(){
+		// 	alert("hello world");
+		// }
+    // btn.click() //弹出警告框
+    // 所以btn是调用者
+    console.log(this); //btn 对象
+    
+    })
+  </script>
+</body>
+
+</html>

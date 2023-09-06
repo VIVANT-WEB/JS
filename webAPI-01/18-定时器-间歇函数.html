@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // setInterval(函数名,间隔时间)
+    setInterval(function(){
+      console.log('一秒执行一次'
+      );
+    },1000)
+    // 由于函数名()的格式是立即调用，所以只写函数名，等隔了规定的时间就自动调用了。
+   
+    let n = setInterval(fn, 2000)
+    function fn(){
+      console.log('二秒执行一次');
+      clearInterval(n)
+    }
+    
+   
+  </script> 
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .box {
+            width: 600px;
+            margin: 50px auto;
+            display: flex;
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        .qs {
+
+            width: 450px;
+            height: 40px;
+            color: red;
+
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        .btns button {
+            width: 120px;
+            height: 35px;
+            margin: 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>随机点名</h2>
+    <div class="box">
+        <span>名字是：</span>
+        <div class="qs"></div>
+    </div>
+    <div class="btns">
+        <button class="start" >开始</button>
+        <button class="end">结束</button>
+    </div>
+
+    <script>
+        // 随机数函数
+        function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+        // 数据数组
+        const arr = ['马超', '黄忠', '赵云', '关羽', '张飞']
+        //    1.获取元素
+        const content =  document.querySelector('.qs')
+        const start = document.querySelector('.start')
+        const end = document.querySelector('.end')
+        // 定时器id
+        let n = 0
+        let random
+        // 3.绑定事件
+        start.addEventListener('click',function(){
+          // 2.开启定时器
+         n  = setInterval(function(){
+          random = getRandom(0,arr.length - 1)
+         
+          content.innerHTML = arr[random]
+             // 按钮的样式改为不可选取状态
+            // 如果数组里面只有一个值，就禁用  
+            if(arr.length === 1){
+            start.disabled = end.disabled = true
+         
+            console.log(arr);
+        }
+        },200)
+
+        })
+        end.addEventListener('click',function(){
+            // 判断开启事件了再把事件停止
+            if(n !== 0){
+            clearInterval(n)
+        }
+            // 判断随机数执行没有执行，执行了就删除抽中的元素，没执行不删
+            if(random !== undefined){
+            arr.splice(random,1)
+        }
+          
+        }
+        )
+
+    </script>
+</body>
+
+</html>

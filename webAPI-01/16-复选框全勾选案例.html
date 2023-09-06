@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="checkbox">
+  <button disabled>点击</button>
+  <script>
+  // 获取元素
+  const input = document.querySelector('input')
+
+  // css中没有checked默认是false。
+  console.log(input.checked); //false
+  input.checked =  true //字符串里面只有一种情况是flase,就是空字符串。true是关键字不可能是变量所有不用加引号
+  const button = document.querySelector('button')
+  button.disabled = true
+  </script>
+</body>
+</html>

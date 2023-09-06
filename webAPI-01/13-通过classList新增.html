@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 300px;
+      margin: 100px auto;
+      background-color: pink;
+    }
+    .nav {
+    color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+
+  </div>
+  <script>
+  //  获取div元素
+  const box = document.querySelector('div')
+
+//  追加类 add（）
+  box.classList.add('box')  
+  // 删除类 
+  box.classList.remove('box')
+  // 切换类 toggle 有就删除，没有就加上
+  box.classList.toggle('nav')
+  </script>
+</body>
+</html>

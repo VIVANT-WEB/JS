@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>div里面的内容</div>
+   <script>
+    // 获取元素
+    const div = document.querySelector('div')
+    // 修改文字内容 对象.innerText 属性
+    console.log(div.innerText); //获取文字内容
+    div.innerText = '啥也不是' //修改文字内容
+    console.log(div.innerText); //获取文字内容
+    
+    const box = document.querySelector('div')
+    // 添加/修改标签内部文字内容
+    box.innerHTML = `哈喽，俺是<strong>刘德华</strong>`
+
+   </script>
+</body>
+</html> 

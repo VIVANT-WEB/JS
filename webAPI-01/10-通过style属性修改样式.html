@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      height: 200px;
+      width: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <script>
+    const div = document.querySelector('div')
+    // 修改样式属性 对象.style.样式属性 = '值'
+    // 多组单词的采用小驼峰命名法
+    // 中扩号也行但是太复杂，用小驼峰js就自动帮你把格式转换了
+    // div.style['background-color'] = 'blue'
+    div.style.backgroundColor = 'blue'
+    div.style.border = '2px solid yellow'
+    div.style.borderTop = '2px solid red'
+  </script>
+</body>
+</html> 
