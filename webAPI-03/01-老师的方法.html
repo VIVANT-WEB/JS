@@ -75,45 +75,31 @@
     </tr>
   </table>
   <script>
-    //获取元素
-    const all = document.querySelector('#checkAll')
-    const checkbox = document.querySelectorAll('.ck')
-    // 定义变量记录复选框选中个数
-    let num = 0
-    // 循环添加事件监听
-    for (let i = 0; i < checkbox.length; i++) {
-      checkbox[i].addEventListener('click', function () {
-        if (checkbox[i].checked === true) {
-          num++
-        } else if (checkbox[i].checked === false) {
-          num--
-        }
-        if (num === 3) {
-          all.checked = true
-        } else {
-          all.checked = false
-        }
-      })    }
-    // 多选按钮事件监听
-    all.addEventListener('click', function () {
-
-      if (all.checked === true) {
-        num = 0
-        for (let i = 0; i < checkbox.length; i++) {
-          checkbox[i].checked = true
-          num++
-        }
-      }
-      if (all.checked === false) {
-
-        for (let i = 0; i < checkbox.length; i++) {
-          checkbox[i].checked = false
-          num--
-        }
+    // 获取元素
+    const checkAll = document.querySelector('#checkAll')
+    const cks = document.querySelectorAll('.ck')
+    // 给复选框添加点击事件
+    checkAll.addEventListener('click',function(){
+      // console.log(checkAll.checked); 得到的是true或者false
+      // 让所有的ck的checked的值。等于复选框的checked
+      for(let i = 0; i < cks.length; i++){
+        cks[i].checked = this.checked
       }
     })
-
-
+    // 小复选框控制大复选框
+    // 给所有小复选框添加点击事件
+   for(let i = 0; i < cks.length; i++){
+    cks[i].addEventListener('click',function(){
+      // 判断选中的小复选框个数 是不是等于 总的小复选框个数
+      // const selectNum = document.querySelectorAll('.ck:checked')
+      // if(selectNum.length === 3){
+      //   checkAll.checked = true
+      // }else if(selectNum.length !== cks.length){
+      //   checkAll.checked = false
+      // }
+      checkAll.checked = document.querySelectorAll('.ck:checked').length === cks.length
+    })
+   }
 
   </script>
 </body>

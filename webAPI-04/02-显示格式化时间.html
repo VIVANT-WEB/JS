@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 300px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    
+  </div>
+  <script>
+    setInterval(function(){
+      div.innerHTML = getMyDate()
+    },1000)
+    const div = document.querySelector('div')
+    function getMyDate(){
+     const date = new Date()
+     let h = date.getHours()
+     let m = date.getMinutes()
+     let s = date.getSeconds()
+     h = h < 10 ? `0`+h : h
+     m = m < 10 ? `0`+m : m
+     s = s < 10 ? `0`+s : s
+     
+     return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()} ${h}:${m}:${s}`
+    }
+    // 因为刚开始得等一秒才调用会出现一秒空白情况，所以先写一个先调用
+    div.innerHTML = getMyDate()
+  </script>
+</body>
+</html>

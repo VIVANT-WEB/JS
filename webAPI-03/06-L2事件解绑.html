@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+  </style> 
+</head>
+
+<body>
+  <div></div>
+  <script>
+   const div = document.querySelector('div')
+   function fn(){
+    alert('我是点击事件')
+   }
+   div.addEventListener('click',fn)
+  //  解绑事件。注意：匿名函数无法解绑，第二个参数是函数名不加小括号 
+   div.removeEventListener('click',fn)
+  </script>
+</body>
+
+</html>

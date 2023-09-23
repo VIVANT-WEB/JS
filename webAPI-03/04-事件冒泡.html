@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="box1"></div>
+    <script>
+      const box = document.querySelector('.box')
+      const box1 = document.querySelector('.box1')
+      document.addEventListener('click', function () {
+        alert('我是爷爷')
+      }, false)
+      box.addEventListener('click', function () {
+        alert('我是爸爸')
+      }, false)
+      box1.addEventListener('click', function (e) {
+        alert('我是儿子')
+        // 阻止流动传播 事件对象.stopPropagation()
+        e.stopPropagation()
+      }, false) 
+    </script>
+  </div>
+</body>
+
+</html> 

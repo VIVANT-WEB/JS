@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const btn = document.querySelector('button')
+    btn.onclick = function(){
+      alert('点击了')
+    }
+    // 因为js中函数是对象，函数是Function类型的实例，所赋值null就可以
+    // 但是在某些情况下无法创建对象。 在这种情况下，JS 提供一个特殊值null —表示缺少对象。
+    btn.onclick = null
+  </script>
+</body>
+</html>

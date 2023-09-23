@@ -35,7 +35,6 @@
   <div class="box">
     <button class="close">x</button>
   </div>
-  
   <script>
     //  1.获取元素
     const button = document.querySelector('.close')
@@ -43,8 +42,8 @@
     button.addEventListener('click', function () {
       // 隐藏是通过display,display属于样式
       // 大盒子设置display = 'none',里面的小盒子也就没有了
-      box.style.display = 'none'
-  })  
+      this.parentNode.style.display = 'none'
+  })
 
   </script>
 </body>
